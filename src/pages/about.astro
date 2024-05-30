@@ -1,4 +1,6 @@
 ---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 import '../styles/global.css'
 
 const pageTitle = 'About Me';
@@ -38,9 +40,7 @@ const textCase = "capitalize"
         </style>
 	</head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+		<Header />
         <h1>My Astro Site</h1>
         <h1>About Me</h1>
         <h2>... and my new Astro site!</h2>
@@ -65,5 +65,10 @@ const textCase = "capitalize"
         {happy && <p>I am happy to be learning Astro!</p>}
         {finished && <p>I finished this tutorial!</p>}
         {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
+		<Footer />
+		<script>
+			import "../scripts/menu.ts"
+		</script>
     </body>
 </html>
